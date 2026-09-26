@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+html {
+    height: fit-content;
+}
+
+@media screen and (max-width: 432px) {
+    html {
+        background-image: url(pictures/egor-litvinov-IdsKb3VYRcY-unsplash-vertical.jpg);
+    }
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Neue', cursive, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+
+    /* colors */
+
+    --bg: #f9fafb;
+    --dark-bg: #02000c;
+    --l-navy: #dfe0ff;
+    --l-navy-tr: #dfe0ff11;
+    --navy: #030417;
+    --navy-tr: #030417b3;
+    --blue: #06082f;
+
+    --grey-1: #cdcdcd;
+    --grey-1-tr: #cdcdcded;
+    --grey-1-tr-2: #cdcdcd66;
+    --grey-2: #333333;
+    --grey-3: #8d9295;
+    --grey-4: #a4a4a4;
+    --grey-5: #444444;
+    --grey-6: #555555;
+    --grey-black-1: #121212;
+
+    /* fonts */
+    --header-font: "Poiret One", sans-serif;
+
+    --box-shadow-before-hover: 0 2px 5px rgba(0, 0, 0, 0.2);
+    --box-shadow-after-hover: 0 2px 5px rgba(0, 0, 0, 0.6);
+
+}
+
+/* firebase rules @ https://console.firebase.google.com/u/1/ */
+
+/* {
+  "rules": {
+    "userArray": {
+      // Allow anyone to read messages
+      ".read": "true",
+
+      // Allow anyone to write messages
+      ".write": "true",
+
+      "$messageId": {
+        // Validate that the message has the required fields
+        ".validate": "newData.child('text').isString() && newData.child('timestamp').isString()"
+      }
+    }
+  }
+} */

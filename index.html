@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anonymous Confessions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="variables.css">
+    <link rel="icon" href="pictures/cute-night-sky-background-with-3d-cloud-moon-stars-square-composition.png">
+</head>
+<body>
+    <div id="messageArea" style="display:none;">
+        <main>
+            <h1>Anonymous Confessions</h1>
+            <p>Drop a confession, say it anonymously. Maybe they'll read it one day. 🖤</p>
+            
+            <div class="theme-mode">
+                <h4>theme: </h4>
+                <!-- <input id="input" type="checkbox" /> -->
+                <div class="checkbox-wrapper-35">
+                    <input value="private" name="input" id="input" type="checkbox" class="input">
+                    <label for="input">
+                        <span class="input-x-text">Dark Mode is </span>
+                        <span class="input-x-toggletext">
+                            <span class="input-x-unchecked"><span class="input-x-hiddenlabel">Unchecked: </span>Off</span>
+                            <span class="input-x-checked"><span class="input-x-hiddenlabel">Checked: </span>On</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="input">
+                <input type="text" id="userInput" placeholder="Enter your message anonymously...">
+                <button id="sendButton" onclick="addToArray()">Send</button>
+            </div>
+    
+            <div class="filter">
+                <label for="timeFilter">Filter by Time:</label>
+                <select id="timeFilter" onchange="filterMessagesByTime()">
+                    <option value="all">All</option>
+                    <option value="1">Between Now & 1 Day Ago</option>
+                    <option value="10">Between 1 & 10 Days Ago</option>
+                    <option value="30">Between 10 Days & 1 Month Ago</option>
+                    <option value="180">Between 1 & 6 Months Ago</option>
+                    <option value="365">Between 6 Months & 1 Year Ago</option>
+                    <option value="before365">All Before 1 Year Ago</option>
+                </select>
+            </div>            
+    
+            <h3>View the Confessions, find the one that is meant just for you.. </h3>
+            <div id="arrayDisplay"></div>
+        </main>
+    
+        <footer>
+            <p>&copy; 2025 • Anonymous Confessions | All Rights Reserved.<br>Designed & Developed By <a href="https://nero404-dev.github.io/nero404-portfolio/">nero404</a></p>
+        </footer>
+    </div>
+
+    <div id="accessDenied" style="display:none;">
+        <h1>Anonymous Confessions</h1>
+        <h2>Access Denied</h2>
+        <p>Please try entering the site again between: <br><span>9:00 PM</span> & <span>6:00 AM</span></p>
+        <p id="note">It's only about <br>Late-Night Confessions <br>🌙 🖤 ✨</p>
+
+        <div class="footer">
+            <p>&copy; 2025 • Anonymous Confessions | All Rights Reserved.<br>Designed & Developed By <a href="https://nero404-dev.github.io/nero404-portfolio/">nero404</a></p>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
